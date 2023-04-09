@@ -1,8 +1,6 @@
 package ThreeSum;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.*;
 
 public class ThreeSum {
 
@@ -13,30 +11,31 @@ public class ThreeSum {
     }
 
     public static List<List<Integer>> threesum(int[] num) {
-        List<List<Integer>> res = new ArrayList<>();
+        Set<List<Integer>> res = new HashSet<>();
+        if (num.length == 0) return new ArrayList<>(res);
+        Arrays.sort(num);
 
-        for (int i = 0; i < num.length; i++) {
-            for (int j = 1; j < num.length; j++) {
-                for (int k = 2; k < num.length; k++) {
 
-                    List<Integer> subList = new ArrayList<>();
-                    if (num[i] + num[j] + num[k] == 0) {
-                        subList.add(num[i]);
-                        subList.add(num[j]);
-                        subList.add(num[k]);
-                    }
-                    res.add(subList);
-                }
+        for (int i = 0; i < num.length - 2; i++) {
+            int j = i + 1;
+            int k = num.length - 1;
+            while (j < k) {
+                int sum = num[i] + num[j] + num[k];
+                if (sum == 0) res.add(Arrays.asList(num[i], num[j++], num[k--]));
+                else if (sum > 0) k--;
+                else if (sum < 0) j++;
             }
-        }
 
-        return res.stream().distinct().collect(Collectors.toList());
+        }
+        return new ArrayList<>(res);
+
     }
+
 
     public static void removeInnerListIfContainsDuplikate(List<List<Integer>> list) {
         for (int i = 0; i < list.size(); i++) {
             List<Integer> innerList = list.get(i);
-            if(innerList.stream().distinct().count() < list.get(i).size()) {
+            if (innerList.stream().distinct().count() < list.get(i).size()) {
                 list.remove(list.get(i));
 
             }
