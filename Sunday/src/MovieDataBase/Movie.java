@@ -1,12 +1,12 @@
 package MovieDataBase;
 
 public class Movie {
-    private int releaseYear;
-    private String genre;
-    private double rating;
+    private final int releaseYear;
+    private final String genre;
+    private final double rating;
 
     // Constructor
-    public Movie( String genre,int releaseYear, double rating) {
+    public Movie(String genre, int releaseYear, double rating) {
         this.releaseYear = releaseYear;
         this.genre = genre;
         this.rating = rating;

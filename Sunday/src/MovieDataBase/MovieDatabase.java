@@ -34,13 +34,11 @@ Explain your choice of data structure and provide the Java implementation for th
 
 public class MovieDatabase {
 
+    private final HashMap<String, Movie> database = new HashMap<>();
     private String title;
     private int releaseYear;
     private String genre;
     private double rating;
-
-    private final HashMap<String, Movie> database = new HashMap<>();
-
 
     public void addMovie(String tile, String genre, int releaseYear, double rating) {
 
