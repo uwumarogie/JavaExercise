@@ -10,12 +10,15 @@ public class TopKFrequent {
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(topKFrequent(new int[]{1, 1, 1, 2, 2, 3}, 2))); // [1,2]
+        System.out.println(Arrays.toString(topKFrequent(new int[]{1, 1, 1, 12, 2, 2, 2, 3, 3, 3, 3, 5, 6, 7}, 3))); //[3,1,2]
         System.out.println(Arrays.toString(topKFrequent(new int[]{1}, 1)));// [1]
+        System.out.println(Arrays.toString(topKFrequent(new int[0], 1))); // []
         System.out.println(Arrays.toString(topKFrequent(new int[]{-1, 12, 12, 12, Integer.MAX_VALUE, Integer.MIN_VALUE, Integer.MAX_VALUE}, 2))); // [12, Integer.MAX_VALUE]
     }
 
 
     public static int[] topKFrequent(int[] nums, int k) {
+
         return Arrays.stream(nums)
                 .boxed()
                 // Creating a HashMap<Integer, Long>
