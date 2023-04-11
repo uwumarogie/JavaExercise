@@ -37,7 +37,6 @@ public class FirstUniqueCharacter {
             }
         }
 
-        // If no non-repeating character is found
         return -1;
     }
 
