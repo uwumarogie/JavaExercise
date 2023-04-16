@@ -21,11 +21,13 @@ public class WordPattern {
         HashMap<Character, String> map = new HashMap<Character, String>();
         for (int i = 0; i < ch.length; i++) {
             if (map.containsKey(ch[i])) {
-                if (!map.get(ch[i]).equals(str[i]))
+                if (!map.get(ch[i]).equals(str[i])) {
                     return false;
+                }
             } else {
-                if (map.containsValue(str[i]))
+                if (map.containsValue(str[i])) {
                     return false;
+                }
                 map.put(ch[i], str[i]);
             }
         }

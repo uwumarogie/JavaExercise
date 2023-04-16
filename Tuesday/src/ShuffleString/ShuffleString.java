@@ -11,13 +11,12 @@ public class ShuffleString {
 
     public static String restoreString(String s, int[] indices) {
 
-        if(s.length() != indices.length) return "";
+        if (s.length() != indices.length) return "";
 
         StringBuilder sb = new StringBuilder();
         char[] c = new char[s.length()];
 
         for (int i = 0; i < s.length(); i++) {
-
             c[indices[i]] = s.charAt(i);
         }
         sb.append(c);

@@ -9,8 +9,6 @@ public class HighestProduct {
         System.out.println(findHighestProduct(new int[0])); // 0
         System.out.println(findHighestProduct(new int[]{Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE})); //1
         System.out.println(findHighestProduct(new int[]{-12, -12, -12, -42, -100})); // -144
-
-
     }
 
 

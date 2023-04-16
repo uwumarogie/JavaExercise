@@ -24,16 +24,15 @@ Indices 2, 4, and 5 do not match.
 */
 
     public static void main(String[] args) {
-
-        System.out.println(heightChecker(new int[]{1,1,3,5,4})); // 2
+        System.out.println(heightChecker(new int[]{1, 1, 3, 5, 4})); // 2
         System.out.println(heightChecker(new int[0])); // 0
-        System.out.println(heightChecker(new int[]{Integer.MIN_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE, 33,45,22})); // 3
-        System.out.println(heightChecker(new int[]{3,2,1,0,1,2,5,4,3,6})); // 7
+        System.out.println(heightChecker(new int[]{Integer.MIN_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE, 33, 45, 22})); // 3
+        System.out.println(heightChecker(new int[]{3, 2, 1, 0, 1, 2, 5, 4, 3, 6})); // 7
     }
 
     public static int heightChecker(int[] heights) {
 
-        if(heights.length == 0) return 0;
+        if (heights.length == 0) return 0;
 
         int[] expected = Arrays.stream(heights).sorted().toArray();
 

@@ -11,6 +11,7 @@ public class SetOperation {
         System.out.println(union(first, second));
     }
 
+    @SafeVarargs
     public static <T> Set<T> union(Set<T>... sets) {
         Set<T> result = new HashSet<>();
         for (Set<T> set : sets) {
@@ -19,6 +20,7 @@ public class SetOperation {
         return result;
     }
 
+    @SafeVarargs
     public static <T> Set<T> intersection(Set<T>... sets) {
         Set<T> result = new HashSet<>();
         if (sets.length > 0) {
@@ -30,6 +32,7 @@ public class SetOperation {
         return result;
     }
 
+    @SafeVarargs
     public static <T> Set<T> difference(Set<T> first, Set<T>... sets) {
         Set<T> result = new HashSet<>(first);
         for (Set<T> set : sets) {

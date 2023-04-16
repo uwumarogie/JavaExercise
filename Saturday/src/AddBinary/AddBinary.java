@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class AddBinary {
 
     public static void main(String[] args) throws Exception {
-        System.out.println(addBinary("0000", "1111")); // 1111
+        System.out.println(addBinary("0000", "1111")); // 01111
         System.out.println(addBinary("1111", "1111")); // 11110
         System.out.println(addBinary("0001", "1111")); // 10000
         System.out.println(addBinary("0100", "1111")); // 10011

@@ -30,16 +30,4 @@ public class ThreeSum {
         return new ArrayList<>(res);
     }
 
-
-    public static void removeInnerListIfContainsDuplikate(List<List<Integer>> list) {
-        for (int i = 0; i < list.size(); i++) {
-            List<Integer> innerList = list.get(i);
-            if (innerList.stream().distinct().count() < list.get(i).size()) {
-                list.remove(list.get(i));
-
-            }
-        }
-    }
-
-
 }

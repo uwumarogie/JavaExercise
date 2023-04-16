@@ -37,5 +37,4 @@ public class DistinctPairs {
                 .map(Object::toString)
                 .collect(Collectors.joining(", "));
     }
-
 }
